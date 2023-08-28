@@ -16,6 +16,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+// import CustomIcon from './src/components/CustomIcon';
+import {searchMovies} from './src/api/apicalls';
 
 import {
   Colors,
@@ -62,6 +64,8 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  console.log(searchMovies('avengers'));
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -72,6 +76,8 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        {/* <CustomIcon name="search" size={25} /> */}
+        {/* <CustomIcon name="ticket" size={25} /> */}
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
